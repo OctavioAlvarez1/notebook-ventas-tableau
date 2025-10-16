@@ -31,19 +31,6 @@ La solución implementa un flujo de datos **end-to-end** utilizando **AWS S3** p
 <img src="Imagenes/estructura.png" alt="Descripción de la imagen" width="600">
 
 ---
-
-## 🧱 Arquitectura por Capas
-
-| Capa | Descripción | Ejemplo |
-|------|--------------|----------|
-| **RAW** | Datos originales en formato CSV almacenados en S3. | `s3://global-notebooks/raw/notebooks_2020_2024.csv` |
-| **BRONZE** | Limpieza técnica: eliminación de duplicados, tipado y normalización de texto. | `Queries/clean_bronze.sql` |
-| **SILVER** | Aplicación de reglas de negocio y agregaciones anuales por marca y región. | `Queries/agg_silver.sql` |
-| **GOLD** | Tablas finales optimizadas para Tableau (ranking global, market share, KPIs). | `Queries/gold_kpis.sql` |
-
-> Esta estructura **raw → bronze → silver → gold** asegura trazabilidad, control de calidad y reproducibilidad del pipeline.
-
----
 ## 📜 Consultas SQL en Athena
 
 Todas las consultas están en la carpeta **`Queries/`**.  
@@ -66,18 +53,7 @@ Ejemplo: *Top 5 marcas por ingresos totales*
 ## 🔁 Incrementalidad & Idempotencia
 En producción, el pipeline está preparado para ejecutar cargas incrementales e idempotentes.
 
--- Incrementalidad: traer solo datos nuevos
-CREATE OR REPLACE TABLE bronze_sales AS
-SELECT * FROM raw_sales
-WHERE ingestion_date > (SELECT MAX(ingestion_date) FROM bronze_sales);
-
--- Idempotencia: UPSERT / MERGE
-MERGE INTO silver_sales t
-USING bronze_sales s
-ON t.id_venta = s.id_venta
-WHEN MATCHED THEN UPDATE SET t.revenue_usd = s.revenue_usd
-WHEN NOT MATCHED THEN INSERT VALUES (s.id_venta, s.brand, s.region, s.year, s.revenue_usd);
-
+<img src="Imagenes/consulta2.png" alt="Descripción de la imagen" width="600">
 ✅ Esto garantiza que el resultado final sea consistente aunque el proceso se ejecute varias veces.
 
 ## 📊 Visualizaciones del Dashboard
