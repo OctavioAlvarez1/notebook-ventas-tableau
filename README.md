@@ -193,13 +193,13 @@ Diseño:
 
 ##📎 7. Conclusiones Finales
 
-Huawei lidera el mercado tanto en unidades como en ingresos totales.
+- Huawei lidera el mercado tanto en unidades como en ingresos totales.
 
-MSI y Asus se consolidan como competidores cercanos.
+- MSI y Asus se consolidan como competidores cercanos.
 
-Las diferencias regionales explican parte del rendimiento: Europa y América dominan.
+- Las diferencias regionales explican parte del rendimiento: Europa y América dominan.
 
-El pricing premium es clave para rentabilidad (no solo volumen).
+- El pricing premium es clave para rentabilidad (no solo volumen).
 
 El pipeline demostró la integración exitosa entre Python, AWS S3, Athena y Tableau, garantizando reproducibilidad y escalabilidad.
 
@@ -215,35 +215,6 @@ El pipeline demostró la integración exitosa entre Python, AWS S3, Athena y Tab
 | Infraestructura | **AWS Cloud**                            |
 | Dataset         | **CSV 2020–2024 (notebooks_ventas.csv)** |
 
----
-
-## Estructura del repositorio
-📁 notebooks-ventas-tableau/
-│
-├── ETL/
-│   ├── limpieza_transformacion.ipynb
-│   └── etl_gold.ipynb
-│
-├── EDA/
-│   └── eda_ventas_completo.ipynb
-│
-├── SQL/
-│   ├── 01_market_share_por_marca.sql
-│   ├── 02_tendencia_anual_top5_marcas.sql
-│   ├── 03_unidades_por_continente_y_marca.sql
-│   ├── 04_ingreso_vs_unidades_con_precio_promedio.sql
-│   └── 05_top5_marcas_por_ingreso_total.sql
-│
-├── Output/
-│   ├── market_share_por_marca.csv
-│   ├── tendencia_anual_top5.csv
-│   └── ...
-│
-├── Imagenes/
-│   ├── pipeline.png
-│   └── dashboard.png
-│
-└── README.md
 ---
 
 ✅ Autor
