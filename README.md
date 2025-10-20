@@ -176,25 +176,18 @@ LOCATION 's3://notebooks-datalake-oalvarez/gold/market_share_por_marca/';
 
 Vistas incluidas:
 
-Market Share Global por Marca
-
-Tendencia Anual Top 5 Marcas
-
-Unidades por Continente y Marca
-
-Ingreso vs Unidades Vendidas
-
-Top 5 Marcas por Ingreso
-
-Heatmap de Ventas (Marca vs Año)
+ - Market Share Global por Marca
+ - Tendencia Anual Top 5 Marcas
+ - Unidades por Continente y Marca
+ - Ingreso vs Unidades Vendidas
+ - Top 5 Marcas por Ingreso
+ - Heatmap de Ventas (Marca vs Año)
 
 Diseño:
 
-Colores coherentes entre vistas (Huawei rojo, MSI celeste, Asus azul, HP gris, Samsung amarillo).
-
-Etiquetas internas para unidades vendidas.
-
-Dashboards ajustados para Tableau Public (sin conexión directa a AWS).
+ - Colores coherentes entre vistas (Huawei rojo, MSI celeste, Asus azul, HP gris, Samsung amarillo).
+ - Etiquetas internas para unidades vendidas.
+ - Dashboards ajustados para Tableau Public (sin conexión directa a AWS).
 
 ---
 
