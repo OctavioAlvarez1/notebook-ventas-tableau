@@ -172,7 +172,7 @@ LOCATION 's3://notebooks-datalake-oalvarez/gold/market_share_por_marca/';
 📍 Dashboard:
 🔗 Ver en Tableau Public
 
-<img src="Imagenes/dashboard.png" alt="Dashboard de Tableau" width="800"/>
+<img src="Imagenes/Dashboard.png" alt="Dashboard de Tableau" width="800"/>
 
 Vistas incluidas:
 
